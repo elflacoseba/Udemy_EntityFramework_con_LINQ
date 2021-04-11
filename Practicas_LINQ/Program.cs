@@ -14,9 +14,18 @@ namespace Practicas_LINQ
         {
             List<Estudiante> estudiantes = new EstudianteRepositorio().GetEstudiantes();
 
-            foreach (Estudiante e in estudiantes )
+            //foreach (Estudiante e in estudiantes )
+            //{
+            //    Console.WriteLine($"ID: {e.Id.ToString().PadLeft(2,' ')},\t Nombre: {(e.Nombre + ",").PadRight(20,' ')} Materia: {e.Materia}");
+            //}
+
+            //select() nos permite seleccionar campos específicos
+
+            var e = estudiantes.Select( x => new { x.Id, x.Nombre, x.Materia });
+
+            foreach (var item in e)
             {
-                Console.WriteLine($"ID: {e.Id.ToString().PadLeft(2,' ')},\t Nombre: {(e.Nombre + ",").PadRight(20,' ')} Materia: {e.Materia}");
+                Console.WriteLine($"ID: {item.Id}, Nombre: {item.Nombre}, Materia: {item.Materia}");
             }
 
             Console.ReadKey();
