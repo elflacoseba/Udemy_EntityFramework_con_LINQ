@@ -21,9 +21,19 @@ namespace Practicas_LINQ
 
             //select() nos permite seleccionar campos específicos
 
-            var e = estudiantes.Select( x => new { x.Id, x.Nombre, x.Materia });
+            //var e = estudiantes.Select( x => new { x.Id, x.Nombre, x.Materia });
 
-            foreach (var item in e)
+            //foreach (var item in e)
+            //{
+            //    Console.WriteLine($"ID: {item.Id}, Nombre: {item.Nombre}, Materia: {item.Materia}");
+            //}
+
+            //where nos permite filtrar resultados de la consulta en base a evaluaciones que nosotros proporcionemos
+            //Seleccionar unicamente materia programación
+
+            var resultado = estudiantes.Where(x => x.Materia.Contains("Programación")).ToList();
+
+            foreach (var item in resultado)
             {
                 Console.WriteLine($"ID: {item.Id}, Nombre: {item.Nombre}, Materia: {item.Materia}");
             }
