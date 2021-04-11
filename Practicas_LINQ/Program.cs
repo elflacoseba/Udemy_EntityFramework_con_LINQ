@@ -31,11 +31,20 @@ namespace Practicas_LINQ
             //where nos permite filtrar resultados de la consulta en base a evaluaciones que nosotros proporcionemos
             //Seleccionar unicamente materia programación
 
-            var resultado = estudiantes.Where(x => x.Materia.Contains("Programación")).ToList();
+            //var resultado = estudiantes.Where(x => x.Materia.Contains("Programación")).ToList();
+
+            //foreach (var item in resultado)
+            //{
+            //    Console.WriteLine($"ID: {item.Id}, Nombre: {item.Nombre}, Materia: {item.Materia}");
+            //}
+
+            //Mostrar Estudiantes con Nota 1 mayor o igual a 7
+
+            var resultado = estudiantes.Where(x => x.Nota1 >= 7).ToList();
 
             foreach (var item in resultado)
             {
-                Console.WriteLine($"ID: {item.Id}, Nombre: {item.Nombre}, Materia: {item.Materia}");
+                Console.WriteLine($"ID: {item.Id}, Nombre: {item.Nombre}, Materia: {item.Materia}, Nota 1: {item.Nota1}");
             }
 
             Console.ReadKey();
