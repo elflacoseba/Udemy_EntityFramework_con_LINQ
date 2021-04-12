@@ -14,7 +14,7 @@ namespace Practicas_LINQ.Clases
         {
             List<Estudiante> estudiantes = new EstudianteRepositorio().GetEstudiantes();
 
-            //select() nos permite seleccionar campos específicos
+            Console.WriteLine("SELECT() nos permite seleccionar campos específicos.\n");
 
             var e = estudiantes.Select(x => new { x.Id, x.Nombre, x.Materia });
 

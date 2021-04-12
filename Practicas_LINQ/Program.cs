@@ -13,10 +13,14 @@ namespace Practicas_LINQ
         {
 
             //SELECT()
-            S4C12 leccion = new S4C12();
+            //S4C12 leccion = new S4C12();
+
+            //WHERE()
+            S4C13 leccion = new S4C13();
 
             leccion.MuestraDatos();
 
+            Console.WriteLine("");
             Console.ReadKey();
         }
     }
