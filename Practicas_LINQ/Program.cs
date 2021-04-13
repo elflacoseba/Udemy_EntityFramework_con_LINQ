@@ -16,7 +16,10 @@ namespace Practicas_LINQ
             //S4C12 leccion = new S4C12();
 
             //WHERE()
-            S4C13 leccion = new S4C13();
+            //S4C13 leccion = new S4C13();
+
+            //SELECTMANY()
+            S4C14 leccion = new S4C14();
 
             leccion.MuestraDatos();
 
